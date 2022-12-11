@@ -4,3 +4,25 @@
 ![2](https://user-images.githubusercontent.com/102711363/204182583-993d59d2-4ead-4dfb-a674-2a9bcccd16be.PNG)
 
 네이버 지도를 이용한 대략적 m 확인
+
+
+import matplotlib.pyplot as plt
+# 나눔고딕 설치
+!apt -qq -y install fonts-nanum > /dev/null
+
+import matplotlib.font_manager as fm
+
+fontpath = '/usr/share/fonts/truetype/nanum/NanumBarunGothic.ttf'
+
+font = fm.FontProperties(fname=fontpath, size=9)
+
+fm._rebuild()
+
+# 그래프에 retina display 적용
+
+%config InlineBackend.figure_format = 'retina'
+
+# Colab 의 한글 폰트 설정
+
+plt.rc('font', family='NanumBarunGothic') 
+     
